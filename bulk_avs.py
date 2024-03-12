@@ -1,14 +1,15 @@
 import easypost
 import csv
 import time
+from dotenv import dotenv_values
 
 # Set your EasyPost API key
-easypost.api_key = 'your_api_key'
+easypost.api_key = dotenv_values(".env")['TEST_API_KEY']
 
 def verify_address(address):
     try:
         verified_address = easypost.Address.create(
-            verify=["delivery"],
+            verify=[True],
             street1=address['street1'],
             street2=address.get('street2', ''),
             city=address['city'],
