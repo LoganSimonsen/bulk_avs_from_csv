@@ -1,0 +1,1 @@
+This script intends to loop through a list of addresses, imported from addresses.csv, and verify them against the EasyPost address verification API. Failures are output into one csv file, while successfully verified addresses are output to another csv file. This is a basic script written for example purposes.
